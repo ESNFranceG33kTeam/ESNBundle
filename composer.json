@@ -1,12 +1,30 @@
 {
-  "name": "esn/esnbundle",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/ESNFranceG33kTeam/ESNBundle"
-    }
+  "name" : "esn/esnbundle",
+  "description" : "This bundle will help your project with Galaxy CAS authentification and Galaxy Roles management",
+  "type" : "symfony-bundle",
+  "authors" : [{
+    "name" : "Jeremie Samson",
+    "email" : "jeremie.samson76@gmail.com"
+  }],
+  "keywords" : [
+    "demo bundle"
   ],
-  "require": {
-    "esn/esnbundle": "dev-master"
+  "license" : [
+    "MIT"
+  ],
+  "require" : {
+  },
+  "autoload" : {
+    "psr-0" : {
+      "Esn\\EsnBundle" : ""
+    }
+  },
+  "target-dir" : "Esn/EsnBundle",
+  "repositories" : [{
+  }],
+  "extra" : {
+    "branch-alias" : {
+      "dev-master" : "1.0.x"
+    }
   }
 }
