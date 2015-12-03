@@ -1,0 +1,3 @@
+esn_esn_homepage:
+    path:     /
+    defaults: { _controller: EsnEsnBundle:Default:index }
