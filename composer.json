@@ -1,0 +1,12 @@
+{
+  "name": "esn/esnbundle",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/ESNFranceG33kTeam/ESNBundle"
+    }
+  ],
+  "require": {
+    "esn/esnbundle": "dev-master"
+  }
+}
