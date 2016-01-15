@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the ESN package.
+ *
+ * (c) ESNFranceG33kTeam <https://github.com/ESNFranceG33kTeam/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Esn\EsnBundle\Command;
 
 use Doctrine\ORM\EntityManager;
@@ -9,17 +18,16 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Created by PhpStorm.
- * User: jerem
- * Date: 11/11/15
- * Time: 10:40
+ * Storage section object
+ *
+ * @author Jérémie Samson <jeremie.samson@ix.esnlille.fr>
  */
 class ImportSectionCommand extends ContainerAwareCommand
 {
     protected function configure()
     {
         $this
-            ->setName('fdo:section:import')
+            ->setName('esn:section:import')
             ->setDescription('Import all sections from XML')
         ;
     }

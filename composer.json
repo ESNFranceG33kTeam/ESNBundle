@@ -4,10 +4,12 @@
   "type" : "symfony-bundle",
   "authors" : [{
     "name" : "Jeremie Samson",
-    "email" : "jeremie.samson76@gmail.com"
+    "email" : "jeremie.samson@ix.esnlille.fr"
   }],
   "keywords" : [
-    "demo bundle"
+    "esn",
+    "sections",
+    "erasmus student network"
   ],
   "license" : [
     "MIT"
