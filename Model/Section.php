@@ -11,6 +11,8 @@
 
 namespace Esn\EsnBundle\Model;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Storage section object
  *
@@ -22,53 +24,64 @@ abstract class Section implements SectionInterface
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
      */
-    protected $name;
-
+    private $name;
     /**
      * @var \DateTime
+     *
+     * @ORM\Column(name="joindate", type="datetime")
      */
-    protected $joindate;
-
+    private $joindate;
     /**
      * @var string
+     *
+     * @ORM\Column(name="code", type="string", length=255)
      */
-    protected $code;
-
+    private $code;
     /**
      * @var string
+     *
+     * @ORM\Column(name="street", type="string", length=255)
      */
-    protected $street;
-
+    private $street;
     /**
      * @var string
+     *
+     * @ORM\Column(name="city", type="string", length=255)
      */
-    protected $city;
-
+    private $city;
     /**
      * @var string
+     *
+     * @ORM\Column(name="website", type="string", length=255)
      */
-    protected $website;
-
+    private $website;
     /**
      * @var string
+     *
+     * @ORM\Column(name="facebook", type="string", length=255)
      */
-    protected $facebook;
-
+    private $facebook;
     /**
-     * @var int
+     * @var integer
+     *
+     * @ORM\Column(name="longitude", type="integer")
      */
-    protected $longitude;
-
+    private $longitude;
     /**
-     * @var int
+     * @var integer
+     *
+     * @ORM\Column(name="latitude", type="integer")
      */
-    protected $latitude;
-
+    private $latitude;
     /**
      * @var string
+     *
+     * @ORM\Column(name="country", type="string", length=255)
      */
-    protected $country;
+    private $country;
 
     /**
      * Constructor
