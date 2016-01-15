@@ -12,6 +12,7 @@
 namespace Esn\EsnBundle\Entity;
 
 use \Esn\EsnBundle\Model\Section as BaseSection;
+
 /**
 * Storage section object
 *
