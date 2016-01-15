@@ -23,3 +23,22 @@ public function registerBundles()
     );
 }
 ```
+
+Configuration :
+
+``` yaml
+# app/config/config.yml
+esn:
+    host: %esn_cas_host%
+    port: %esn_cas_port%
+    context: %esn_cas_context%
+```
+
+Add the parameters to use for a proper galaxy authentification : 
+
+``` yaml
+# app/config/parameters.yml
+esn_cas_host: 
+esn_cas_port:
+esn_cas_context: 
+```
