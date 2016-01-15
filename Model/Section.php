@@ -27,61 +27,70 @@ abstract class Section implements SectionInterface
      *
      * @ORM\Column(name="name", type="string", length=255)
      */
-    private $name;
+    protected $name;
+
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="joindate", type="datetime")
      */
-    private $joindate;
+    protected $joindate;
+
     /**
      * @var string
      *
      * @ORM\Column(name="code", type="string", length=255)
      */
-    private $code;
+    protected $code;
+
     /**
      * @var string
      *
      * @ORM\Column(name="street", type="string", length=255)
      */
-    private $street;
+    protected $street;
+
     /**
      * @var string
      *
      * @ORM\Column(name="city", type="string", length=255)
      */
-    private $city;
+    protected $city;
+
     /**
      * @var string
      *
      * @ORM\Column(name="website", type="string", length=255)
      */
-    private $website;
+    protected $website;
+
     /**
      * @var string
      *
      * @ORM\Column(name="facebook", type="string", length=255)
      */
-    private $facebook;
+    protected $facebook;
+
     /**
      * @var integer
      *
      * @ORM\Column(name="longitude", type="integer")
      */
-    private $longitude;
+    protected $longitude;
+
     /**
      * @var integer
      *
      * @ORM\Column(name="latitude", type="integer")
      */
-    private $latitude;
+    protected $latitude;
+
     /**
      * @var string
      *
      * @ORM\Column(name="country", type="string", length=255)
      */
-    private $country;
+    protected $country;
 
     /**
      * Constructor
