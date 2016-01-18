@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Esn\EsnBundle\Entity;
+namespace Esn\EsnBundle\Model;
 
 use FOS\UserBundle\Model\User;
 use Symfony\Component\Security\Core\User\UserInterface;

@@ -10,7 +10,7 @@
 
 namespace Esn\EsnBundle\Model;
 
-use Esn\EsnBundle\Entity\GalaxyUserInterface;
+use Esn\EsnBundle\Model\GalaxyUserInterface;
 use FOS\UserBundle\Model\GroupableInterface;
 use FOS\UserBundle\Model\GroupInterface;
 use FOS\UserBundle\Model\UserInterface;
