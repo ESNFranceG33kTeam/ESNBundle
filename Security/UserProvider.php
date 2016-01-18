@@ -19,6 +19,11 @@ class UserProvider extends EsnEsnExtension implements UserProviderInterface
     protected $cas;
 
     /**
+     * @var array
+     */
+    protected $attributes;
+
+    /**
      * @param ContainerInterface $container
      */
     public function __construct(ContainerInterface $container){
@@ -42,14 +47,21 @@ class UserProvider extends EsnEsnExtension implements UserProviderInterface
         $username =  phpCAS::getUser();
 
         if ($username) {
-            $attributes = phpCAS::getAttributes();
+            $this->attributes = phpCAS::getAttributes();
 
-            return new GalaxyUser($username, $attributes, null, null, array());
+            return new GalaxyUser($username, $this->attributes, null, null, array());
         }
 
         throw new UsernameNotFoundException(
             sprintf('Username "%s" does not exist.', $username)
         );
+    }
+
+    /**
+     * @return array
+     */
+    public function getAttributes(){
+        return $this->attributes;
     }
 
     /**
