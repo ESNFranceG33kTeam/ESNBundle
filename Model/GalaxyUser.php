@@ -8,9 +8,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Esn\EsnBundle\Entity;
+namespace Esn\EsnBundle\Model;
 
-use FOS\UserBundle\Model\User;
+use Esn\EsnBundle\Entity\GalaxyUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\EquatableInterface;
 
@@ -383,5 +383,64 @@ abstract class GalaxyUser implements GalaxyUserInterface
     public function setSectionCode($section_code)
     {
         $this->section_code = $section_code;
+    }
+
+    /**
+     * Serializes the user.
+     *
+     * The serialized data have to contain the fields used by the equals method and the username.
+     *
+     * @return string
+     */
+    public function serialize()
+    {
+        return serialize(array(
+            $this->firstname,
+            $this->lastname,
+            $this->galaxy_username,
+            $this->galaxy_roles,
+            $this->galaxy_email,
+            $this->nationality,
+            $this->picture,
+            $this->birthday,
+            $this->gender,
+            $this->telephone,
+            $this->address,
+            $this->country,
+            $this->section_name,
+            $this->section_code,
+            $this->id,
+        ));
+    }
+
+    /**
+     * Unserializes the user.
+     *
+     * @param string $serialized
+     */
+    public function unserialize($serialized)
+    {
+        $data = unserialize($serialized);
+        // add a few extra elements in the array to ensure that we have enough keys when unserializing
+        // older data which does not include all properties.
+        $data = array_merge($data, array_fill(0, 2, null));
+
+        list(
+            $this->firstname,
+            $this->lastname,
+            $this->galaxy_username,
+            $this->galaxy_roles,
+            $this->galaxy_email,
+            $this->nationality,
+            $this->picture,
+            $this->birthday,
+            $this->gender,
+            $this->telephone,
+            $this->address,
+            $this->country,
+            $this->section_name,
+            $this->section_code,
+            $this->id,
+            ) = $data;
     }
 }

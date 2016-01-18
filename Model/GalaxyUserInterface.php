@@ -25,12 +25,12 @@ interface GalaxyUserInterface extends \Serializable
     /**
      * @return array
      */
-    public function getGalaxyRole();
+    public function getGalaxyRoles();
 
     /**
      * @param array $roles
      */
-    public function setGalaxyRole($roles);
+    public function setGalaxyRoles($roles);
 
     /**
      * @return string
@@ -45,12 +45,22 @@ interface GalaxyUserInterface extends \Serializable
     /**
      * @return string
      */
-    public function getSc();
+    public function getSectionName();
 
     /**
-     * @param string $sc
+     * @param string $section_name
      */
-    public function setSc($sc);
+    public function setSectionName($section_name);
+
+    /**
+     * @return string
+     */
+    public function getSectionCode();
+
+    /**
+     * @param string $section_code
+     */
+    public function setSectionCode($section_code);
 
     /**
      * @return string
@@ -131,16 +141,6 @@ interface GalaxyUserInterface extends \Serializable
      * @param string $address
      */
     public function setAddress($address);
-
-    /**
-     * @return string
-     */
-    public function getSection();
-
-    /**
-     * @param string $section
-     */
-    public function setSection($section);
 
     /**
      * @return string

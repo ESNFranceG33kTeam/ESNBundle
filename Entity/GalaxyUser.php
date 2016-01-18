@@ -10,14 +10,15 @@
  */
 
 namespace Esn\EsnBundle\Entity;
-use FOS\UserBundle\Model\User as BaseUser;
+
+use \Esn\EsnBundle\Model\GalaxyUser as BaseGalaxyUser;
 
 /**
 * Storage galaxy user object
 *
  * @author Jérémie Samson <jeremie.samson@ix.esnlille.fr>
  */
-class GalaxyUser extends BaseUser
+class GalaxyUser extends BaseGalaxyUser
 {
 
 }
