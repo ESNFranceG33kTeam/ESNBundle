@@ -128,8 +128,15 @@ abstract class GalaxyUser extends BaseUser implements GalaxyUserInterface
      */
     public function __construct($galaxyUsername, $attributes)
     {
+        parent::__construct();
+
         $this->galaxy_username  = $galaxyUsername;
         $this->galaxy_email     = (array_key_exists('mail', $attributes)) ? $attributes['mail'] : null;
+
+        $this->setUsername($this->galaxy_email);
+        $this->setUsernameCanonical($this->galaxy_email);
+        $this->setEmail($this->galaxy_email);
+
         $this->firstname        = (array_key_exists('first', $attributes)) ? $attributes['first'] : null;
         $this->lastname         = (array_key_exists('last', $attributes)) ? $attributes['last'] : null;
         $this->nationality      = (array_key_exists('nationality', $attributes)) ? $attributes['nationality'] : null;
