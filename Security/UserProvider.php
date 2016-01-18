@@ -2,6 +2,8 @@
 
 namespace Esn\EsnBundle\Security;
 
+use Esn\EsnBundle\DependencyInjection\EsnEsnExtension;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
@@ -9,7 +11,7 @@ use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use phpCAS;
 use Esn\EsnBundle\Entity\GalaxyUser;
 
-class UserProvider implements UserProviderInterface
+class UserProvider extends EsnEsnExtension implements UserProviderInterface
 {
     /**
      * @var array
@@ -17,15 +19,13 @@ class UserProvider implements UserProviderInterface
     protected $cas;
 
     /**
-     * @param $cas_host
-     * @param $cas_context
-     * @param $cas_port
+     * @param ContainerInterface $container
      */
-    public function __construct($cas_host, $cas_context, $cas_port){
+    public function __construct(ContainerInterface $container){
         $this->cas = array(
-            "host" => $cas_host,
-            "port" => $cas_port,
-            "context" => $cas_context
+            "host" => $container->getParameter('cas_host'),
+            "port" => $container->getParameter('cas_port'),
+            "context" => $container->getParameter('cas_context'),
         );
     }
 

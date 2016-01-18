@@ -42,3 +42,9 @@ esn_cas_host:
 esn_cas_port:
 esn_cas_context: 
 ```
+
+Enable CURL in your apache :
+
+``` shell
+sudo apt-get install php5-curl
+```
