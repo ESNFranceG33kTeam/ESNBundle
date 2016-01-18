@@ -20,26 +20,4 @@ use \Esn\EsnBundle\Model\GalaxyUser as BaseGalaxyUser;
  */
 class GalaxyUser extends BaseGalaxyUser
 {
-    /**
-     * @var Section
-     *
-     * @ORM\ManyToOne(targetEntity="Section", inversedBy="users")
-     */
-    protected $section;
-
-    /**
-     * @return Section
-     */
-    public function getSection()
-    {
-        return $this->section;
-    }
-
-    /**
-     * @param Section $section
-     */
-    public function setSection($section)
-    {
-        $this->section = $section;
-    }
 }
